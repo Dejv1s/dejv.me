@@ -1,0 +1,30 @@
+::-webkit-scrollbar {
+    width: 7px;
+    position: absolute;
+}
+
+
+::-webkit-scrollbar-track {
+    background: linear-gradient(-180deg, #010910, #010910, #020c15, #020c15);
+    animation: gradient 15s ease infinite;
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+::-webkit-scrollbar-thumb {
+    background: #2d62b2;
+    border-radius: 12px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #204986;
+}

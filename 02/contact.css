@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* Default CSS */
+html {
+    background: linear-gradient( #130F40, #000000);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100%;
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+body {
+    color: #CECFDF;
+    font-family: "Poppins", sans-serif;
+}
+
+
+.logo{
+    font-weight: bold;
+    font-size: 20px;
+    margin: 30px 30px;
+    color: #FDFDFD;
+}
+li {
+    display: inline-block;
+    font-size: 1.5em;
+    list-style-type: none;
+    padding: 1em;
+    text-transform: uppercase;
+}
+
+li span {
+    display: block;
+    font-size: 2rem;
+    color: #FDFDFD;
+    font-weight: bold;
+}
+
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    margin: 20px;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.logo-container {
+    flex: 1;
+    text-align: left;
+}
+
+.nav-links-container {
+    flex: 6;
+    display: flex;
+    justify-content: center;
+}
+
+.email-links {
+    flex: 1;
+    text-align: right;
+    font-weight: bold;
+    color: #CECFDF;
+    text-decoration: none;
+}
+.email-links:hover {
+    color: #FDFDFD;
+    transition: color 0.5s ease;
+}
+.nav-links-container a {
+    color: #FDFDFD;
+    text-align: center;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 14px 20px;
+    margin: 20px 5px;
+    transition: color 0.5s ease;
+    position: relative;
+}
+.nav-links-container a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #FDFDFD;
+    font-weight: normal;
+    transform: translateX(50%);
+    transition: all 0.5s ease-in-out;
+}
+
+.nav-links-container a:hover {
+    color: #FDFDFD;
+    font-weight: bolder;
+    transition: all 0.1s ease-in-out;
+}
+
+.nav-links-container a:hover::before {
+    width: 50%;
+    transform: translateX(50%);
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.84);
+    font-size: 11px;
+    padding-top: 25px;
+    padding-bottom: 3px;
+    border-top: 1px solid #3572ce;
+    position: fixed;
+    bottom: 0;
+}
+.footer {
+    padding: 0;
+    color: #3572ce;
+}
+footer p {
+    margin: 0;
+    padding: 0;
+}
+/* Hamburger Menu Styles */
+.hamburger-menu {
+    display: none;
+    text-align: center;
+    justify-content: right;
+    font-size: 30px;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.84);
+    transition: transform 0.3s ease;
+}
+
+.hamburger-menu.active {
+    transform: rotate(-90deg);
+}
+
+/* Contact Section */
+#contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 2cm auto;
+}
+.tite-contact {
+    color: #fdfdfd;
+}
+#contact-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#contact-section p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.email-icon {
+    display: inline-block;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.email-icon:hover {
+    transform: scale(1.1);
+}
+
+.email-icon svg {
+    margin-top: 1cm;
+    fill: #4287ef;
+    width: 40px;
+    height: 40px;
+}
+
+.mail-p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #4287ef;
+    font-weight: bold;
+}
+.discord-p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #CECFDF;
+    text-decoration: none;
+    margin-left: 10px;
+}
+.social-sites-p {
+    margin-top: 1.5cm;
+}
+.instagram-p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #CECFDF;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.social-icons {
+    text-decoration: none;
+}
+
+.social-icon {
+    display: inline-block;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icon img {
+    width: 40px;
+    height: 40px;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+.instagram-p:hover, .discord-p:hover {
+    color: #FDFDFD;
+    transition: color 0.5s ease-in;
+}
+@keyframes lightning {
+    0% {
+        filter: brightness(0.8);
+    }
+    50% {
+        filter: brightness(1.3);
+    }
+    100% {
+        filter: brightness(0.8);
+    }
+}
+
+.email-icon:hover, .mail-p:hover svg {
+    animation: lightning 0.9s infinite;
+}
+
+/* Media Query for screens with a max width of 768px */
+/* Media Query for screens with a max width of 768px */
+/* Media Query for screens with a max width of 768px */
+@media (max-width: 768px) {
+    .logo {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: flex;
+        flex: 1;
+        justify-content: flex-start; /* Ensures the hamburger menu is aligned to the left */
+        margin-left: 10px; /* Adds some margin to the left */
+        font-size: 30px;
+        cursor: pointer;
+        color: rgba(255, 255, 255, 0.84);
+        transition: transform 0.3s ease;
+    }
+
+    .nav-links-container {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        transition: max-height 0.3s ease;
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    .nav-links-container.show {
+        display: flex;
+        max-height: 500px;
+    }
+
+    .nav-links-container a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .email-links {
+        display: none;
+    }
+
+    #contact-section {
+        width: 100%;
+        max-width: 90%;
+        margin: 20px 0;
+        padding: 10px;
+    }
+
+    .email-icon svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    .mail-p, .discord-p, .instagram-p {
+        font-size: 14px;
+    }
+
+    .social-icon img {
+        width: 30px;
+        height: 30px;
+    }
+}
