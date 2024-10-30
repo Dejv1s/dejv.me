@@ -1,6 +1,6 @@
 $(document).ready(function() {
     $('#stars').height($(document).height());
-    for (var i = 0; i < 200; i++) {
+    for (var i = 0; i < 100; i++) {
         var star = document.createElement('div');
         star.className = 'star';
         star.style.top = Math.random() * 100 + '%';
