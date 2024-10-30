@@ -190,65 +190,6 @@ footer p {
     from { border-right-color: rgba(255,255,255,.75); }
     to { border-right-color: transparent; }
 }
-/*.aboutme-header{
-    font-size: 30px;
-    margin: 0;
-    text-align: center;
-    padding: 0px 10px;
-    color: rgba(255, 255, 255, 0.84);
-    text-shadow: 2px 2px 4px #000000;
-}
-.aboutme-text {
-    font-size: 17px;
-    margin-top: 1cm;
-    text-align: center;
-    padding: 10px 20px;
-    text-shadow: 2px 2px 4px #000000;
-    color: rgba(255, 255, 255, 0.84);
-    margin-bottom: 50px;
-}
-
-.experiences {
-    display: flex;
-    justify-content: center;
-    text-decoration: none;
-    text-shadow: 2px 2px 4px #000000;
-    margin-bottom: 40px;
-    text-align: center;
-
-}
-.about-container {
-    margin: 50px 0;
-    display: block;
-}
-
-.contactme {
-    display: flex;
-    justify-content: center;
-    margin-top: 3cm;
-    text-decoration: none;
-    text-shadow: 2px 2px 4px #000000;
-    margin-bottom: 40px;
-    text-align: center;
-}
-.contactme-text {
-    font-size: 17px;
-    margin-top: 1cm;
-    text-align: center;
-    padding: 10px 20px;
-    text-shadow: 2px 2px 4px #000000;
-    color: rgba(255, 255, 255, 0.84);
-    margin-bottom: 10px;
-}
-.contactme-email {
-    font-size: 17px;
-    text-align: center;
-    padding: 10px 20px;
-    text-shadow: 2px 2px 4px #000000;
-    color: #4991fc;
-    font-weight: bold;
-    margin-bottom: 50px;
-}*/
 /* Mobile Styles */
 @media (max-width: 768px) {
     .logo {
@@ -292,25 +233,4 @@ footer p {
     .email-links {
         display: none;
     }
-
-    /*.aboutme-header {
-        font-size: 24px;
-    }
-
-    .aboutme-text {
-        font-size: 14px;
-        margin-top: 0.5cm;
-    }
-
-    .contactme {
-        margin-top: 2cm;
-    }
-
-    .contactme-text, .contactme-email {
-        font-size: 14px;
-    }
-
-    .progress-container {
-        width: 80%;
-    }*/
 }
