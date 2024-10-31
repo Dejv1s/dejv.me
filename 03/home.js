@@ -30,7 +30,7 @@ $(document).ready(function(){
 
     // Toggle hamburger menu
     $('#hamburger-menu').on('click', function() {
-        $(this).toggleClass('active'); // Toggle the active class for animation
+        $(this).toggleClass('active');
         $('#nav-links-container').toggleClass('show');
     });
 });
