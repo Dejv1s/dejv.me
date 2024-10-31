@@ -11,6 +11,10 @@ body {
     font-family: "Poppins", sans-serif;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
 }
 h1{
     margin-top: 200px;
@@ -53,18 +57,21 @@ b {
         background-position: 0% 50%;
     }
 }
-
-
-
 nav {
-    background-color: #333;
-    padding: 1rem;
+    background-color: rgba(51, 51, 51, 0.5); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Blur effect */
+    padding: 1rem 2rem;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    justify-content: center;
     margin: 0;
     padding: 0;
 }
@@ -77,9 +84,11 @@ nav {
     color: #fff;
     text-decoration: none;
     font-size: 1.2rem;
+    font-weight: 200;
     display: flex;
     align-items: center;
-    transition: color 0.3s ease;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .nav-links a svg {
@@ -89,9 +98,15 @@ nav {
 
 .nav-links a:hover {
     color: #1f4eb5;
+    transform: scale(1.1);
+
 }
 
 .nav-links a:hover svg {
-    transform: scale(1.2);
+    transform: rotateZ(15deg) scale(1.2);
+}
+.nav-links a:active {
+    color: #1f4eb5;
+    transform: scale(1.1);
 }
 
