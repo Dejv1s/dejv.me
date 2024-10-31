@@ -1,14 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 /* Default CSS */
 html {
-    background: linear-gradient(#130F40, #000000);
+    background: linear-gradient(#E5E6E4, #ECECEB, #F2F3F2, #F9F9F8, #FFFFFF);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
     height: 100vh;
 }
 body {
-    color: #fdfdfd;
+    color: #161416;
     font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
 }
 h1{
     margin-top: 200px;
@@ -52,4 +54,44 @@ b {
     }
 }
 
+
+
+nav {
+    background-color: #333;
+    padding: 1rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 1rem;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.nav-links a svg {
+    margin-right: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #1f4eb5;
+}
+
+.nav-links a:hover svg {
+    transform: scale(1.2);
+}
 
