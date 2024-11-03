@@ -1,23 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 /* Default CSS */
 html {
-    height: auto;
-    background: #191D25;
+    background: linear-gradient(135deg, #191D25, #0d121a);
+    animation: gradient 30s ease infinite;
 }
 body {
     color: #FFFFFF;
     font-family: "Poppins", sans-serif;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    height: 100vh;
     align-items: center;
 }
 /* Navbar */
 nav {
     background-color: rgba(15, 14, 16, 0.25); /* Semi-transparent background */
-
     padding: 1rem 2rem;
     border-radius: 20px;
     display: flex;
@@ -61,14 +60,13 @@ nav {
 }
 /* Header */
 .header-section {
+    margin-top: 8cm;
+    margin-right: 10cm;
     display: flex;
     flex-direction: column;
     align-items: flex-start; /* Align items to the left */
-    justify-content: center;
-    height: 100vh;
-    text-align: left; /* Align text to the left */
-    padding-left: 2rem; /* Add padding to move it more to the center */
 }
+
 .animated-text {
     opacity: 0;
     transform: translateY(-50px);
@@ -138,4 +136,24 @@ nav {
         opacity: 1;
         transform: translateY(0);
     }
+}
+/* Footer */
+footer {
+    margin-top: auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+}
+.footer-text {
+    font-size: 1rem;
+    font-weight: 200;
+    color: #FFFFFF;
+}
+.footer-image {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 1rem;
 }
