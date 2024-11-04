@@ -3,13 +3,13 @@
 html {
     background: linear-gradient(135deg, #191D25, #0d121a);
     animation: gradient 30s ease infinite;
+    scroll-behavior: smooth;
 }
 body {
     color: #FFFFFF;
     font-family: "Poppins", sans-serif;
     margin: 0 auto;
     padding: 0;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -136,6 +136,74 @@ nav {
         opacity: 1;
         transform: translateY(0);
     }
+}
+/* About Section */
+.about-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    margin-top: 9cm;
+    margin-left: 11.3cm; /* Adjust the margin-left as needed */
+    padding-right: 10cm;
+}
+.about-text {
+    font-size: 1.5rem;
+    font-weight: 200;
+    margin: 0;
+}
+.section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.section-subtitle {
+    margin-top: 2rem;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.about-bold:hover {
+    color: #648ad7;
+    font-weight: 700;
+    cursor: pointer;
+    transition: color 0.3s ease, font-weight 0.3s ease;
+}
+/* Contact Section */
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    margin-top: 9cm;
+    margin-left: 11.3cm; /* Adjust the margin-left as needed */
+    padding-right: 10cm;
+    margin-bottom: 5cm;
+}
+.contact-text {
+    font-size: 1.5rem;
+    font-weight: 200;
+    margin: 0;
+}
+.email-link {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 0.3rem 0.3rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+.email-link:hover {
+    color: #648ad7;
+    transform: scale(1.1);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+.contact-bold {
+    font-weight: 700;
+    transition: color 0.3s ease, font-weight 0.3s ease;
+}
+.contact-bold:hover {
+    color: #648ad7;
+    font-weight: 700;
+    cursor: pointer;
+    transition: color 0.3s ease, font-weight 0.3s ease;
 }
 /* Footer */
 footer {

@@ -14,17 +14,18 @@
     <meta name="msapplication-navbutton-color" content="#ffffff">
     <!-- IMPORT CSS & SCRIPTS / SCSS-->
     <link rel="stylesheet" type="text/css" href="css/home.css">
+    <script src="script/script.js" defer></script>
 </head>
 <body>
-<!--<nav>
+<nav>
   <ul class="nav-links">
-        <li><a href="#header-section"><svg width="24" height="24" fill="currentColor"><use xlink:href="#home-icon"></use></svg> Home</a></li>
+        <li><a href="#header"><svg width="24" height="24" fill="currentColor"><use xlink:href="#home-icon"></use></svg> Home</a></li>
         <li><a href="#about"><svg width="24" height="24" fill="currentColor"><use xlink:href="#about-icon"></use></svg> About</a></li>
-        <li><a href="#projects"><svg width="24" height="24" fill="currentColor"><use xlink:href="#projects-icon"></use></svg> Projects</a></li>
+        <!--<li><a href="#projects"><svg width="24" height="24" fill="currentColor"><use xlink:href="#projects-icon"></use></svg> Projects</a></li>-->
         <li><a href="#contact"><svg width="24" height="24" fill="currentColor"><use xlink:href="#contact-icon"></use></svg> Contact</a></li>
     </ul>
 </nav>
--->
+
 
 <svg style="display: none;">
     <symbol id="home-icon" viewBox="0 0 24 24">
@@ -50,16 +51,44 @@
 </svg>
 
 <!-- HOME SECTION -->
-<header class="header-section">
+<header class="header-section" id="header">
     <h1 class="animated-text">🦆 David Stuchlík...</h1>
     <p class="typing-animation">Programátor webových stránek a aplikací & student<br>
     Web is under work, contact: contact@dejv.me ❤️‍🔥</p>
     <a href="https://github.com/Dejv1s" class="header-button">
         <svg width="24" height="24" fill="currentColor"><use xlink:href="#github-icon"></use></svg> GitHub</a>
 </header>
+
+<!-- ABOUT SECTION -->
+<section id="about" class="about-section">
+    <h2 class="section-title">O mně</h2>
+    <p class="section-subtitle">👋 Kdo jsem...</p>
+    <p class="about-text">Jmenuji se David Stuchlík, je mi 17 let a jsem student
+    <b class="about-bold">Střední a Vyšší odborné školy</b>. Zajímám se o
+    <b class="about-bold">programování webových aplikací</b> a
+    <b class="about-bold">Windows aplikací v C#</b>.
+    Také se dost zabývám
+    <b class="about-bold">grafickým designem</b> a momentálně se učím
+    <b class="about-bold">React.js</b></p>
+    <p class="section-subtitle">🔧 S jakými technologiemi pracuju...</p>
+    <p class="about-text">Momentálně pracuji s <b class="about-bold">C#</b>, ve kterým převážně tvořím Windows Aplikace pomocí <b class="about-bold">Avalonia UI</b>.
+        Kromě toho také programuji v <b class="about-bold">JavaScriptu</b> & <b class="about-bold">Jave</b>. Převážně využívám <b class="about-bold">JetBrains IDE's</b>,
+    protože je mám díky škole zdarma xd.</p>
+    <p class="section-subtitle">🔮 Mé projekty & výtvory...</p>
+    <p class="about-text">Momentálně pracuji na pár projektech který momentálně nejsou veřejný ale brzy budou na <b class="about-bold">GitHubu</b>. Všechny budou <b class="about-bold">Open-Source</b> a zdarma ke stažení.</p>
+</section>
+<!-- CONTACT SECTION -->
+<section id="contact" class="contact-section">
+    <h2 class="section-title">Kontakt</h2>
+    <p class="section-subtitle">📫 Jak mě kontaktovat...</p>
+    <p class="contact-text">Pokud mě chcete kontaktovat, můžete mi napsat na e-mail:
+    <a href="mailto:contact@dejv.me" class="email-link">contact@dejv.me</a> nebo na discord <b class="contact-bold">@dejv._</b> nebo můžete zkouknout můj <b class="contact-bold">GitHub</b> xd</p>
+</section>
+
 <footer class="footer-section">
     <img src="images/favicon5.png" class="footer-image" alt="David Stuchlík">
-    <p class="footer-text">© 2024 David Stuchlík | Made with 💖</p>
+    <p class="footer-text">© 2024 David Stuchlík | Made with 💖 <br>       Instagram: <b class="contact-bold">@dejvis._</b>
+    <br>              ver.: 0.1.6</p>
 </footer>
 </body>
 </html>
