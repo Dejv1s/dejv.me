@@ -11,3 +11,12 @@ document.querySelectorAll('nav a').forEach(anchor => {
         });
     });
 });
+document.getElementById('hamburger-menu').addEventListener('click', function() {
+    document.getElementById('nav-links').classList.toggle('active');
+});
+$(window).resize(function(){
+    console.log($(window).width());
+});
+document.getElementById('hamburger-menu').addEventListener('click', function() {
+    document.getElementById('nav-links').classList.toggle('active');
+});
