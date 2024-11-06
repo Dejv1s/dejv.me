@@ -356,7 +356,7 @@ footer {
         font-size: 0.6rem;
     }
 }
-@media (max-width: 300px) {
+@media (max-width: 360px) {
     .header-section, .about-section, .contact-section {
         margin-left: 0.2cm;
         padding-right: 0.2cm;
