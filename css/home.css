@@ -77,7 +77,21 @@ nav {
     width: 25px;
     background: #FFFFFF;
     margin: 4px 0;
-    transition: 0.4s;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+/* Checkbox for toggling */
+.menu-toggle {
+    display: none;
+}
+/* Animation for the hamburger menu */
+.menu-toggle:checked + .hamburger-menu span:nth-child(1) {
+    transform: translateY(11px) rotate(45deg);
+}
+.menu-toggle:checked + .hamburger-menu span:nth-child(2) {
+    opacity: 0;
+}
+.menu-toggle:checked + .hamburger-menu span:nth-child(3) {
+    transform: translateY(-11px) rotate(-45deg);
 }
 /* Header */
 .header-section {
@@ -398,6 +412,10 @@ footer {
         display: flex;
     }
     .hamburger-menu {
+        display: flex;
+    }
+    /* Hamburger Menu Animation */
+    .menu-toggle:checked ~ .nav-links {
         display: flex;
     }
     .header-section, .about-section, .contact-section {
