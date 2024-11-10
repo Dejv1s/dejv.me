@@ -2,7 +2,7 @@
 <html lang="cs">
 <head>
     <!-- Made by David Stuchlík-->
-    <title>David Stuchlík | Web & App Developer🔧</title>
+    <title>David Stuchlík | Web & App Developer 🔧</title>
     <link rel="icon" type="image/x-icon" href="images/favicon5.png">
     <!-- META TAGS -->
     <meta charset="UTF-8">
@@ -15,7 +15,7 @@
     <!--<embed name="GoodEnough" src="./music/music.mp3" loop="true" hidden="true" autostart="true">-->
     <!-- IMPORT CSS & SCRIPTS / SCSS-->
     <link rel="stylesheet" type="text/css" href="css/home.css">
-    <script src="script/script.js"></script>
+    <script src="script/script.js" defer></script>
 </head>
 <body>
 <div class="snowflakes" aria-hidden="true">
@@ -65,6 +65,7 @@
     <ul class="nav-links" id="nav-links">
         <li><a href="#header"><svg width="24" height="24" fill="currentColor"><use xlink:href="#home-icon"></use></svg> Home</a></li>
         <li><a href="#about"><svg width="24" height="24" fill="currentColor"><use xlink:href="#about-icon"></use></svg> About</a></li>
+        <li><a href="#projects"><svg width="24" height="24" fill="currentColor"><use xlink:href="#projects-icon"></use></svg> Projects </a></li>
         <li><a href="#contact"><svg width="24" height="24" fill="currentColor"><use xlink:href="#contact-icon"></use></svg> Contact</a></li>
     </ul>
 </nav>
@@ -89,6 +90,9 @@
             <path d="M5 7l5 5l-5 5"></path>
             <path d="M12 19l7 0"></path>
         </svg>
+        <symbol id="calendar-icon" viewBox="0 0 24 24">
+            <path d="M19 4h-1V2h-2v2H8V2H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"/>
+    </symbol>
     </symbol>
 </svg>
 
@@ -118,6 +122,38 @@
     <p class="section-subtitle">🔮 Mé projekty & výtvory...</p>
     <p class="about-text">Momentálně pracuji na pár projektech který momentálně nejsou veřejný ale brzy budou na <b class="about-bold">GitHubu</b>. Všechny budou <b class="about-bold">Open-Source</b> a zdarma ke stažení.</p>
 </section>
+<!-- PROJECTS SECTION -->
+<section id="projects" class="projects-section">
+    <h2 class="section-title">Projects</h2>
+    <p class="section-subtitle">🔨 Moje momentální projekty...</p>
+    <div class="project-cards">
+        <div class="project-card">
+            <img src="./images/website-project.png" alt="Project 1" class="project-image">
+            <div class="project-content">
+                <h3 class="project-title">Dejv.me</h3>
+                <p class="project-description">Osobní webové portfolio pomocí HTML,CSS & JS. Dostupné na githubu</p>
+                <a href="https://github.com/Dejv1s/dejv.me" class="project-link">View on GitHub</a>
+                <div class="project-date">
+                    <svg width="16" height="16" fill="currentColor"><use xlink:href="#calendar-icon"></use></svg>
+                    <span>10/11/2024</span>
+                </div>
+            </div>
+        </div>
+        <div class="project-card">
+            <img src="./images/coming%20soon.png" alt="Coming soon" class="project-image">
+            <div class="project-content">
+                <h3 class="project-title">Coming soon...</h3>
+                <p class="project-description">In the future...</p>
+                <a href="https://github.com/Dejv1s" class="project-link">Coming soon...</a>
+                <div class="project-date">
+                    <svg width="16" height="16" fill="currentColor"><use xlink:href="#calendar-icon"></use></svg>
+                    <span>??/??/??</span>
+                </div>
+            </div>
+        </div>
+        <!-- Add more project cards as needed -->
+    </div>
+</section>
 <!-- CONTACT SECTION -->
 <section id="contact" class="contact-section">
     <h2 class="section-title">Kontakt</h2>
@@ -130,7 +166,7 @@
 <footer class="footer-section">
     <img src="images/favicon5.png" class="footer-image" alt="David Stuchlík">
     <p class="footer-text">© 2024 David Stuchlík | Made with 💖 <br>       Instagram: <b class="contact-bold">@dejvis._</b>
-    <br>              ver.: 0.2.5</p>
+    <br>              ver.: 0.2.9</p>
 </footer>
 </body>
 </html>
