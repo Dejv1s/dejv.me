@@ -36,9 +36,9 @@ body {
 }
 
 .snowflake {
-    position: fixed;
+    position: absolute;
     top: -10%;
-    z-index: 9999;
+    z-index: -9999;
     -webkit-user-select: none;
     user-select: none;
     cursor: default;
