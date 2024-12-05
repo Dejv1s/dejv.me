@@ -22,4 +22,3 @@ document.getElementById('hamburger-menu').addEventListener('click', function() {
 $(window).resize(function(){
     console.log($(window).width());
 });
-// Loader

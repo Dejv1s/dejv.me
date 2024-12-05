@@ -625,22 +625,22 @@ nav {
     }
     /* Project Cards */
     .project-card {
-        width: 120px;
+        width: 100%;
     }
     .project-title {
-        font-size: 0.8rem;
+        font-size: 0.5rem;
     }
     .project-description {
-        font-size: 0.7rem;
+        font-size: 0.4rem;
     }
     .project-date {
-        font-size: 0.6rem;
+        font-size: 0.3rem;
     }
 }
 @media (max-width: 395px) {
     .header-section, .about-section, .contact-section {
-        margin-left: 0.5cm;
-        padding-right: 0.5cm;
+        margin-left: 0.1cm;
+        padding-right: 0.1cm;
     }
     .animated-text {
         font-size: 1rem;
@@ -672,13 +672,13 @@ nav {
         width: 100%;
     }
     .project-title {
-        font-size: 0.7rem;
+        font-size: 0.5rem;
     }
     .project-description {
-        font-size: 0.6rem;
+        font-size: 0.4rem;
     }
     .project-date {
-        font-size: 0.5rem;
+        font-size: 0.3rem;
     }
 }
 @media (max-width: 360px) {
