@@ -1,60 +1,28 @@
 <!DOCTYPE html>
-<html lang="cs">
+<html lang="en">
 <head>
     <!-- Made by David "Dejv" Stuchlík -->
-    <title>David Stuchlík | Web & App Developer 🔧</title>
-    <link rel="icon" type="image/x-icon" href="images/favicon5.png">
+    <link rel="icon" href="images/favicon.png" sizes="512x512" type="image/png">
     <!-- META TAGS -->
-    <meta charset="UTF-8">
-    <meta name="author" content="David Stuchlík">
-    <meta name="description" content="David Stuchlík - Programátor webových stránek a aplikací">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <meta name="theme-color" content="#FDFDFD">
-    <!--<embed name="GoodEnough" src="./music/music.mp3" loop="true" hidden="true" autostart="true">-->
-    <!-- IMPORT CSS & SCRIPTS / SCSS-->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>David Stuchlík | Student, Developer & IT Enthusiast</title>
+    <meta name="description" content="David Stuchlík | Student, Developer & IT Enthusiast">
+    <!-- Facebook / OpenGraph -->
+    <meta property="og:url"                 content="http://dejv.me" />
+    <meta property="og:title"               content="David Stuchlík | Student, Developer & IT Enthusiast" />
+    <meta property="og:description"         content="David Stuchlík | Student, Developer & IT Enthusiast" />
+    <meta property="og:site_name"           content="David Stuchlík | Student, Developer & IT Enthusiast" />
+    <meta property="og:type"                content="website" />
+    <meta property="og:locale"              content="en_US" />
+
+    <!-- IMPORT CSS & SCRIPTS -->
     <link rel="stylesheet" type="text/css" href="css/home.css">
     <script src="script/script.js" defer></script>
 </head>
 <body>
-
-<div class="snowflakes" aria-hidden="true">
-    <div class="snowflake">
-        <div class="inner">❅</div>
-    </div>
-    <div class="snowflake">
-        <div class="inner">❅</div>
-    </div>
-    <div class="snowflake">
-        <div class="inner">❅</div>
-    </div>
-    <div class="snowflake">
-        <div class="inner">❅</div>
-    </div>
-    <div class="snowflake">
-        <div class="inner">❅</div>
-    </div>
-    <div class="snowflake">
-        <div class="inner">❅</div>
-    </div>
-    <div class="snowflake">
-        <div class="inner">❅</div>
-    </div>
-    <div class="snowflake">
-        <div class="inner">❅</div>
-    </div>
-    <div class="snowflake">
-        <div class="inner">❅</div>
-    </div>
-    <div class="snowflake">
-        <div class="inner">❅</div>
-    </div>
-    <div class="snowflake">
-        <div class="inner">❅</div>
-    </div>
-    <div class="snowflake">
-        <div class="inner">❅</div>
-    </div>
-</div>
 <nav>
     <input type="checkbox" id="menu-toggle" class="menu-toggle">
     <label for="menu-toggle" class="hamburger-menu">
@@ -63,45 +31,51 @@
         <span></span>
     </label>
     <ul class="nav-links" id="nav-links">
-        <li><a href="#header"><svg width="24" height="24" fill="currentColor"><use xlink:href="#home-icon"></use></svg> Home</a></li>
-        <li><a href="#about"><svg width="24" height="24" fill="currentColor"><use xlink:href="#about-icon"></use></svg> About</a></li>
-        <li><a href="#projects"><svg width="24" height="24" fill="currentColor"><use xlink:href="#projects-icon"></use></svg> Projects </a></li>
-        <li><a href="#contact"><svg width="24" height="24" fill="currentColor"><use xlink:href="#contact-icon"></use></svg> Contact</a></li>
+        <li>
+            <a href="#header">
+                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd" d="M11.293 3.293a1 1 0 0 1 1.414 0l6 6 2 2a1 1 0 0 1-1.414 1.414L19 12.414V19a2 2 0 0 1-2 2h-3a1 1 0 0 1-1-1v-3h-2v3a1 1 0 0 1-1 1H7a2 2 0 0 1-2-2v-6.586l-.293.293a1 1 0 0 1-1.414-1.414l2-2 6-6Z" clip-rule="evenodd"/>
+                </svg>
+                Home
+            </a>
+        </li>
+        <li>
+            <a href="#about">
+                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd" d="M12 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm-2 9a4 4 0 0 0-4 4v1a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-1a4 4 0 0 0-4-4h-4Z" clip-rule="evenodd"/>
+                </svg>
+                About
+            </a>
+        </li>
+        <li>
+            <a href="#projects">
+                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd" d="M4 4a2 2 0 0 0-2 2v12a2 2 0 0 0 .087.586l2.977-7.937A1 1 0 0 1 6 10h12V9a2 2 0 0 0-2-2h-4.532l-1.9-2.28A2 2 0 0 0 8.032 4H4Zm2.693 8H6.5l-3 8H18l3-8H6.693Z" clip-rule="evenodd"/>
+                </svg>
+                Projects
+            </a>
+        </li>
+        <li>
+            <a href="#contact">
+                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M10 14l11 -11"></path>
+                    <path d="M21 3l-6.5 18a.55 .55 0 0 1 -1 0l-3.5 -7l-7 -3.5a.55 .55 0 0 1 0 -1l18 -6.5"></path>
+                </svg>
+                Contact
+            </a>
+        </li>
     </ul>
+
 </nav>
-
-<svg style="display: none;">
-    <symbol id="home-icon" viewBox="0 0 24 24">
-  <path fill-rule="evenodd" d="M11.293 3.293a1 1 0 0 1 1.414 0l6 6 2 2a1 1 0 0 1-1.414 1.414L19 12.414V19a2 2 0 0 1-2 2h-3a1 1 0 0 1-1-1v-3h-2v3a1 1 0 0 1-1 1H7a2 2 0 0 1-2-2v-6.586l-.293.293a1 1 0 0 1-1.414-1.414l2-2 6-6Z" clip-rule="evenodd"/>
-    </symbol>
-    <symbol id="about-icon" viewBox="0 0 24 24">
- <path fill-rule="evenodd" d="M12 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm-2 9a4 4 0 0 0-4 4v1a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-1a4 4 0 0 0-4-4h-4Z" clip-rule="evenodd"/>
-    </symbol>
-    <symbol id="projects-icon" viewBox="0 0 24 24">
-        <path fill-rule="evenodd" d="M4 4a2 2 0 0 0-2 2v12a2 2 0 0 0 .087.586l2.977-7.937A1 1 0 0 1 6 10h12V9a2 2 0 0 0-2-2h-4.532l-1.9-2.28A2 2 0 0 0 8.032 4H4Zm2.693 8H6.5l-3 8H18l3-8H6.693Z" clip-rule="evenodd"/>
-    </symbol>
-    <symbol id="contact-icon" viewBox="0 0 24 24">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
-            <path d="M10 14l11 -11"></path>
-            <path d="M21 3l-6.5 18a.55 .55 0 0 1 -1 0l-3.5 -7l-7 -3.5a.55 .55 0 0 1 0 -1l18 -6.5"></path> </svg>
-    </symbol>
-    <symbol id="github-icon" viewBox="0 0 24 24">
-        <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
-            <path d="M5 7l5 5l-5 5"></path>
-            <path d="M12 19l7 0"></path>
-        </svg>
-        <symbol id="calendar-icon" viewBox="0 0 24 24">
-            <path d="M19 4h-1V2h-2v2H8V2H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"/>
-    </symbol>
-    </symbol>
-</svg>
-
 <!-- HOME SECTION -->
 <header class="header-section" id="header">
     <h1 class="animated-text">🦆 David Stuchlík...</h1>
     <p class="typing-animation">Programátor webových stránek a aplikací & student<br></p>
     <a href="https://github.com/Dejv1s" target="_blank" rel="noopener noreferrer" class="header-button">
-        <svg width="24" height="24" fill="currentColor"><use xlink:href="#github-icon"></use></svg> GitHub</a>
+        <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 7l5 5l-5 5"></path>
+            <path d="M12 19l7 0"></path>
+        </svg> GitHub</a>
 </header>
 
 <!-- ABOUT SECTION -->
@@ -109,19 +83,20 @@
     <h2 class="section-title">O mně</h2>
     <p class="section-subtitle">👋 Kdo jsem...</p>
     <p class="about-text">Jmenuji se David Stuchlík, je mi 17 let a jsem student
-    <b class="about-bold">Střední a Vyšší odborné školy</b>. Zajímám se o
-    <b class="about-bold">programování webových aplikací</b> a
-    <b class="about-bold">Windows aplikací v C#</b>.
-    Také se dost zabývám
-    <b class="about-bold">grafickým designem</b> a momentálně se učím
-    <b class="about-bold">Django</b>.</p>
+        <b class="about-bold">Střední a Vyšší odborné školy</b>. Zajímám se o
+        <b class="about-bold">programování webových aplikací</b> a
+        <b class="about-bold">Windows aplikací v C#</b>.
+        Také se dost zabývám
+        <b class="about-bold">grafickým designem</b> a momentálně se učím
+        <b class="about-bold">Django</b>.</p>
     <p class="section-subtitle">🔧 S jakými technologiemi pracuju...</p>
     <p class="about-text">Momentálně pracuji s <b class="about-bold">C#</b>, ve kterým převážně tvořím Windows Aplikace pomocí <b class="about-bold">Avalonia UI</b>.
         Kromě toho také programuji v <b class="about-bold">JavaScriptu</b> (ehm... moc ne xd) & <b class="about-bold">Jave</b>. Převážně využívám <b class="about-bold">JetBrains IDE's</b>,
-    jako je <b class="about-bold">WebStorm</b>, <b class="about-bold">PyCharm</b> a nebo <b class="about-bold">Rider</b>.</p>
+        jako je <b class="about-bold">WebStorm</b>, <b class="about-bold">PyCharm</b> a nebo <b class="about-bold">Rider</b>.</p>
     <p class="section-subtitle">🔮 Mé projekty & výtvory...</p>
     <p class="about-text">Momentálně pracuji na pár projektech který momentálně nejsou veřejný ale brzy budou na <b class="about-bold">GitHubu</b>. Všechny budou <b class="about-bold">Open-Source</b> a zdarma ke stažení.</p>
 </section>
+
 <!-- PROJECTS SECTION -->
 <section id="projects" class="projects-section">
     <h2 class="section-title">Projekty</h2>
@@ -131,11 +106,23 @@
             <img src="./images/website-project.png" alt="Project 1" class="project-image">
             <div class="project-content">
                 <h3 class="project-title">Dejv.me</h3>
-                <p class="project-description">Osobní webové portfolio pomocí HTML,CSS & JS. Dostupné na githubu</p>
+                <p class="project-description">Osobní webové portfolio pomocí HTML,CSS & JS. Dostupné na githubu.</p>
                 <a href="https://github.com/Dejv1s/dejv.me" target="_blank" rel="noopener noreferrer" class="project-link">View on GitHub</a>
                 <div class="project-date">
                     <svg width="16" height="16" fill="currentColor"><use xlink:href="#calendar-icon"></use></svg>
                     <span>10/11/2024</span>
+                </div>
+            </div>
+        </div>
+        <div class="project-card">
+            <img src="./images/arc-store.png" alt="Coming soon" class="project-image">
+            <div class="project-content">
+                <h3 class="project-title">Arc-wear.store</h3>
+                <p class="project-description">New generation of clothing brand.</p>
+                <a href="https://github.com/Dejv1s" target="_blank" class="project-link">Coming soon...</a>
+                <div class="project-date">
+                    <svg width="16" height="16" fill="currentColor"><use xlink:href="#calendar-icon"></use></svg>
+                    <span>??/??/2025</span>
                 </div>
             </div>
         </div>
@@ -159,15 +146,14 @@
     <h2 class="section-title">Kontakt</h2>
     <p class="section-subtitle">📫 Jak mě kontaktovat...</p>
     <p class="contact-text">Pokud mě chcete kontaktovat, můžete mi napsat na e-mail:
-    <a href="mailto:contact@dejv.me" class="email-link">contact@dejv.me</a> nebo na discord <b class="contact-bold">@dejv._</b> nebo můžete zkouknout můj <b class="contact-bold">GitHub</b> xd.</p>
+        <a href="mailto:contact@dejv.me" class="email-link">contact@dejv.me</a> nebo na discord <b class="contact-bold">@dejv._</b> nebo můžete zkouknout můj <b class="contact-bold">GitHub</b> xd.</p>
 </section>
 
 <footer class="footer-section">
-    <img src="images/favicon5.png" class="footer-image" alt="David Stuchlík">
     <div class="footer-text">
-        <p>© 2024 David Stuchlík | Made with 💖</p>
+        <p>© 2025 David Stuchlík | Made with 💖</p>
         <p>Instagram: <b class="contact-bold">@dejvis._</b></p>
-        <p>ver.: 0.3.9</p>
+        <p>ver.: 0.4.0</p>
     </div>
 </footer>
 </body>
