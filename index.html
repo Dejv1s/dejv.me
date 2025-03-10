@@ -1,148 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Made by David "Dejv" Stuchlík -->
-    <link rel="icon" href="images/favicon.png" sizes="512x512" type="image/png">
-    <!-- META TAGS -->
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#4b59ff">
 
-    <title>David Stuchlík | Student, Developer & IT Enthusiast</title>
-    <meta name="description" content="David Stuchlík | Student, Developer & IT Enthusiast">
+    <title>David Stuchlík</title>
+    <meta name="description" content="David Stuchlík - Web & App developer">
+
     <!-- Facebook / OpenGraph -->
-    <meta property="og:url"                 content="http://dejv.me" />
-    <meta property="og:title"               content="David Stuchlík | Student, Developer & IT Enthusiast" />
-    <meta property="og:description"         content="David Stuchlík | Student, Developer & IT Enthusiast" />
-    <meta property="og:site_name"           content="David Stuchlík | Student, Developer & IT Enthusiast" />
-    <meta property="og:type"                content="website" />
-    <meta property="og:locale"              content="en_US" />
+    <meta property="og:url"                 content="https://dejv.me" />
+    <meta property="og:title"               content="David Stuchlík" />
+    <meta property="og:description"         content="David Stuchlík - Web & App developer" />
+    <meta property="og:site_name"           content="David Stuchlík" />
+    <meta property="og:image"               content="https://dejv.me/favicon.png" />
+    <meta property="fb:app_id"              content="000000" />  <!-- Used for Domain Insights -->
+    <meta property="og:type"                content="website" /> <!-- website is deafult -->
+    <meta property="og:locale"              content="cs_CZ" />   <!-- en_US is deafult -->
 
-    <!-- IMPORT CSS & SCRIPTS -->
-    <link rel="stylesheet" type="text/css" href="css/home.css">
-    <script src="script/script.js" defer></script>
+    <link rel="icon" href="favicon.png" sizes="62x62" type="image/png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/page/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-<nav>
-    <input type="checkbox" id="menu-toggle" class="menu-toggle">
-    <label for="menu-toggle" class="hamburger-menu">
-        <span></span>
-        <span></span>
-        <span></span>
-    </label>
-    <ul class="nav-links" id="nav-links">
-        <li>
-            <a href="#header">
-                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                    <path fill-rule="evenodd" d="M11.293 3.293a1 1 0 0 1 1.414 0l6 6 2 2a1 1 0 0 1-1.414 1.414L19 12.414V19a2 2 0 0 1-2 2h-3a1 1 0 0 1-1-1v-3h-2v3a1 1 0 0 1-1 1H7a2 2 0 0 1-2-2v-6.586l-.293.293a1 1 0 0 1-1.414-1.414l2-2 6-6Z" clip-rule="evenodd"/>
-                </svg>
-                Home
-            </a>
-        </li>
-        <li>
-            <a href="#about">
-                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                    <path fill-rule="evenodd" d="M12 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm-2 9a4 4 0 0 0-4 4v1a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-1a4 4 0 0 0-4-4h-4Z" clip-rule="evenodd"/>
-                </svg>
-                About
-            </a>
-        </li>
-        <li>
-            <a href="#projects">
-                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                    <path fill-rule="evenodd" d="M4 4a2 2 0 0 0-2 2v12a2 2 0 0 0 .087.586l2.977-7.937A1 1 0 0 1 6 10h12V9a2 2 0 0 0-2-2h-4.532l-1.9-2.28A2 2 0 0 0 8.032 4H4Zm2.693 8H6.5l-3 8H18l3-8H6.693Z" clip-rule="evenodd"/>
-                </svg>
-                Projects
-            </a>
-        </li>
-        <li>
-            <a href="#contact">
-                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M10 14l11 -11"></path>
-                    <path d="M21 3l-6.5 18a.55 .55 0 0 1 -1 0l-3.5 -7l-7 -3.5a.55 .55 0 0 1 0 -1l18 -6.5"></path>
-                </svg>
-                Contact
-            </a>
-        </li>
-    </ul>
+<!-- Add this line at the beginning of the body -->
+<div class="mouse-indicator"></div>
 
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="logo">DS</div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="#home" class="nav-item"><i class="fas fa-home"></i> Domů</a></li>
+            <li><a href="#about" class="nav-item"><i class="fas fa-user"></i> O mně</a></li>
+            <li><a href="#projects" class="nav-item"><i class="fas fa-code"></i> Projekty</a></li>
+            <li><a href="#contact" class="nav-item"><i class="fas fa-envelope"></i> Kontakt</a></li>
+        </ul>
+    </div>
 </nav>
-<!-- HOME SECTION -->
-<header class="header-section" id="header">
-    <h1 class="animated-text">🦆 David Stuchlík...</h1>
-    <p class="typing-animation">Programátor webových stránek a aplikací & student<br></p>
-    <a href="https://github.com/Dejv1s" target="_blank" rel="noopener noreferrer" class="header-button">
-        <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M5 7l5 5l-5 5"></path>
-            <path d="M12 19l7 0"></path>
-        </svg> GitHub</a>
+
+<!-- Header Section -->
+<header id="home" class="header">
+    <div class="header-content">
+        <h1 class="title">
+            <span class="title-animation">David Stuchlík</span>
+        </h1>
+        <p class="subtitle">Web & App Developer</p>
+        <div class="cta-buttons">
+            <a href="#projects" class="btn btn-primary">Vidět projekty</a>
+            <a href="#contact" class="btn btn-secondary">Kontakt</a>
+        </div>
+    </div>
+    <!-- Add this scroll indicator -->
+    <div class="scroll-indicator">
+        <div class="mouse">
+            <div class="wheel"></div>
+        </div>
+        <div class="arrow"></div>
+    </div>
 </header>
 
-<!-- ABOUT SECTION -->
+<!-- About Section -->
 <section id="about" class="about-section">
     <h2 class="section-title">O mně</h2>
-    <p class="section-subtitle">👋 Kdo jsem...</p>
-    <p class="about-text">Jmenuji se David Stuchlík, je mi 17 let a jsem student
-        <b class="about-bold">Střední a Vyšší odborné školy</b>. Zajímám se o
-        <b class="about-bold">programování webových aplikací</b> a
-        <b class="about-bold">Windows aplikací v C#</b>.
-        Také se dost zabývám
-        <b class="about-bold">grafickým designem</b> a momentálně se učím
-        <b class="about-bold">Django</b>.</p>
-    <p class="section-subtitle">🔧 S jakými technologiemi pracuju...</p>
-    <p class="about-text">Momentálně pracuji s <b class="about-bold">C#</b>, ve kterým převážně tvořím Windows Aplikace pomocí <b class="about-bold">Avalonia UI</b>.
-        Kromě toho také programuji v <b class="about-bold">JavaScriptu</b> (ehm... moc ne xd) & <b class="about-bold">Jave</b>. Převážně využívám <b class="about-bold">JetBrains IDE's</b>,
-        jako je <b class="about-bold">WebStorm</b>, <b class="about-bold">PyCharm</b> a nebo <b class="about-bold">Rider</b>.</p>
-    <p class="section-subtitle">🔮 Mé projekty & výtvory...</p>
-    <p class="about-text">Momentálně pracuji na pár projektech který momentálně nejsou veřejný ale brzy budou na <b class="about-bold">GitHubu</b>. Všechny budou <b class="about-bold">Open-Source</b> a zdarma ke stažení.</p>
-</section>
-
-<!-- PROJECTS SECTION -->
-<section id="projects" class="projects-section">
-    <h2 class="section-title">Projekty</h2>
-    <p class="section-subtitle">🔨 Moje momentální projekty...</p>
-    <div class="project-cards">
-        <div class="project-card">
-            <img src="./images/aluminium.png" alt="Aluminium" class="project-image">
-            <div class="project-content">
-                <h3 class="project-title">Aluminium</h3>
-                <p class="project-description">Wireless controller for a movies website through local IP adress<br><br><br></p>
-                <a href="https://github.com/Dejv1s/Aluminium" target="_blank" class="project-link">View on GitHub</a>
-                <div class="project-date">
-                    <svg width="16" height="16" fill="currentColor"><use xlink:href="#calendar-icon"></use></svg>
-                    <span>01/30/2025</span>
-                </div>
-            </div>
+    <div class="glass-cards">
+        <div class="glass-card">
+            <i class="fas fa-laptop-code card-icon"></i>
+            <h3>Development</h3>
+            <p>Zabývám se proramováním Webových stránek a aplikací pomocí HTML, CSS, JS, C# & Django.</p>
         </div>
-        <div class="project-card">
-            <img src="./images/prumkatournaments.png" alt="Průmka Tournaments" class="project-image">
-            <div class="project-content">
-                <h3 class="project-title">Průmka Tournaments</h3>
-                <p class="project-description">E-sport organizace která pořádá turnaje mezi středními školami.</p>
-                <a href="https://prumkatournaments.eu" target="_blank" class="project-link">View Site</a>
-                <div class="project-date">
-                    <svg width="16" height="16" fill="currentColor"><use xlink:href="#calendar-icon"></use></svg>
-                    <span>02/23/2025</span>
-                </div>
-            </div>
+        <div class="glass-card">
+            <i class="fas fa-school card-icon"></i>
+            <h3>Studium</h3>
+            <p>Studuju Vyšší odbornou a Střední průmyslovou školu v Jičíně.</p>
         </div>
-        <!-- More projects incoming -->
+        <div class="glass-card">
+            <i class="fas fa-palette card-icon"></i>
+            <h3>Design</h3>
+            <p>Snažím se vytvořit pro každou novou webovou stránku originální design který je unikátní.</p>
+        </div>
     </div>
 </section>
-<!-- CONTACT SECTION -->
-<section id="contact" class="contact-section">
-    <h2 class="section-title">Kontakt</h2>
-    <p class="section-subtitle">📫 Jak mě kontaktovat...</p>
-    <p class="contact-text">Pokud mě chcete kontaktovat, můžete mi napsat na e-mail:
-        <a href="mailto:contact@dejv.me" class="email-link">contact@dejv.me</a> nebo na discord <b class="contact-bold">@dejv._</b> nebo můžete zkouknout můj <b class="contact-bold">GitHub</b> xd.</p>
+
+<!-- Projects Section -->
+<section id="projects" class="projects-section">
+    <h2 class="section-title">Moje projekty</h2>
+    <div class="projects-container">
+        <div class="project-card">
+            <div class="project-labels">
+                <span class="label">JavaScript</span>
+                <span class="label">HTML</span>
+                <span class="label">CSS</span>
+            </div>
+            <h3 class="project-title">Průmka Tournaments</h3>
+            <p class="project-date">Březen 2025</p>
+            <p class="project-description">Vytvořil jsem webovou stránku pro organizaci která se zabývá tvořením e-sportových turnajů pro střední školy.</p>
+            <a href="https://prumkatournaments.eu" class="project-link">Podívat se <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="project-card">
+            <div class="project-labels">
+                <span class="label">HTML</span>
+                <span class="label">CSS</span>
+                <span class="label">JavaScript</span>
+            </div>
+            <h3 class="project-title">Portfolio</h3>
+            <p class="project-date">Březen 2025</p>
+            <p class="project-description">Vytvořil jsem svoje nové portfolio na které právě koukáte.</p>
+            <a href="https://dejv.me" class="project-link">Podívat se <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="project-card">
+            <div class="project-labels">
+                <span class="label">C#</span>
+                <span class="label">.NET MAUI</span>
+                <span class="label">XAML</span>
+            </div>
+            <h3 class="project-title">Aluminium</h3>
+            <p class="project-date">Leden 2025</p>
+            <p class="project-description">Vytvořil jsem aplikaci pro android díky které můžete mít dálkové ovládání pro Netflix pomocí serveru zapnutého na počítači.</p>
+            <a href="https://github.com/Dejv1s/Aluminium" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
 </section>
 
-<footer class="footer-section">
-    <div class="footer-text">
-        <p>© 2025 David Stuchlík | Made with 💖</p>
-        <p>Instagram: <b class="contact-bold">@dejvis._</b></p>
-        <p>ver.: 0.4.3</p>
+<!-- Contact Section -->
+<section id="contact" class="contact-section">
+    <h2 class="section-title">Chcete semnou něco vytvořit? Kontaktujte mě</h2>
+    <div class="contact-container">
+        <div class="contact-info glass-card">
+            <h3>Contact Information</h3>
+            <p><i class="fas fa-envelope"></i> dejv1s.secret@gmail.com</p>
+            <p><i class="fas fa-map-marker-alt"></i> Jičín, Česká Republika</p>
+            <div class="social-links">
+                <a href="https://github.com/Dejv1s" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="https://instagram.com/Dejvis._/" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-logo">DS</div>
+        <h3 class="footer-title">DAVID STUCHLIK</h3>
+        <div class="footer-socials">
+            <a href="https://instagram.com/dejvis._/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="https://dsc.gg/prumkatournaments" target="_blank" class="social-icon"><i class="fab fa-discord"></i></a>
+            <a href="https://github.com/dejv1s" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+        </div>
+        <p class="copyright">© 2025 David Stuchlik. All rights reserved.</p>
     </div>
 </footer>
+
+<script src="js/script.js"></script>
 </body>
 </html>
