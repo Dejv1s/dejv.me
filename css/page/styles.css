@@ -305,8 +305,13 @@ header .container {
     align-items: center;
     opacity: 1;
     animation: fadeIn 1s forwards 1.5s;
+    transition: opacity 0.5s ease;
 }
-
+.scroll-indicator.hidden {
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
 @keyframes fadeIn {
     to {
         opacity: 1;

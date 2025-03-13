@@ -1,5 +1,5 @@
 // Wait for DOM to load
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Navigation toggle
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('.nav-links');
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-// Typing effect - improved
+    // Typing effect - improved
     const typingElement = document.querySelector('.typing');
     const words = ['Web Developer', 'Designer', 'Freelancer', 'App Developer'];
     let wordIndex = 0;
@@ -73,13 +73,29 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout(typeEffect, typeSpeed);
     }
 
-// Start the typing effect
+    // Start the typing effect
     setTimeout(typeEffect, 1000);
 
     // Scroll to top button
     const scrollTopBtn = document.querySelector('.scroll-top');
 
+    let isScrolling = false; // Track if the user is scrolling
+
     window.addEventListener('scroll', () => {
+        const scrollIndicator = document.querySelector('.scroll-indicator');
+
+        if (window.scrollY > 50) { // Adjust the value (50) to control when the indicator disappears
+            if (!isScrolling) {
+                scrollIndicator.classList.add('hidden');
+                isScrolling = true; // Set scrolling state to true
+            }
+        } else {
+            if (isScrolling) {
+                scrollIndicator.classList.remove('hidden');
+                isScrolling = false; // Reset scrolling state when back at the top
+            }
+        }
+
         if (window.pageYOffset > 300) {
             scrollTopBtn.classList.add('active');
         } else {
