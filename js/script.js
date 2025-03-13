@@ -1,206 +1,184 @@
-// Wait for the DOM to be fully loaded
-document.addEventListener("DOMContentLoaded", () => {
-    // Hamburger menu functionality
-    const mobileMenu = document.getElementById("mobile-menu")
-    const navMenu = document.querySelector(".nav-menu")
+// Wait for DOM to load
+document.addEventListener('DOMContentLoaded', function() {
+    // Navigation toggle
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.nav-links');
+    const navLinks = document.querySelectorAll('.nav-links li');
 
-    if (mobileMenu) {
-        mobileMenu.addEventListener("click", (e) => {
-            e.stopPropagation() // Prevent this click from being caught by the document click listener
-            mobileMenu.classList.toggle("active")
-            navMenu.classList.toggle("active")
-        })
-    }
+    burger.addEventListener('click', () => {
+        // Toggle Nav
+        nav.classList.toggle('active');
 
-    // Close mobile menu when a nav item is clicked
-    document.querySelectorAll(".nav-item").forEach((item) => {
-        item.addEventListener("click", () => {
-            if (mobileMenu.classList.contains("active")) {
-                mobileMenu.classList.remove("active")
-                navMenu.classList.remove("active")
+        // Toggle Burger Animation
+        burger.classList.toggle('active');
+
+        // Animate Links
+        navLinks.forEach((link, index) => {
+            if (link.style.animation) {
+                link.style.animation = '';
+            } else {
+                link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
             }
-        })
-    })
+        });
+    });
 
-    // Close mobile menu when clicking outside
-    document.addEventListener("click", (e) => {
-        if (navMenu.classList.contains("active") && !navMenu.contains(e.target) && !mobileMenu.contains(e.target)) {
-            mobileMenu.classList.remove("active")
-            navMenu.classList.remove("active")
-        }
-    })
+    // Close menu when clicking on a nav link
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            nav.classList.remove('active');
+            burger.classList.remove('active');
 
-    // Prevent clicks inside the menu from closing it
-    navMenu.addEventListener("click", (e) => {
-        e.stopPropagation()
-    })
+            navLinks.forEach(link => {
+                link.style.animation = '';
+            });
+        });
+    });
 
-    // Typing animation for the title
-    const titleElement = document.querySelector(".title-animation")
-    const titleText = titleElement.textContent
-    titleElement.textContent = ""
+// Typing effect - improved
+    const typingElement = document.querySelector('.typing');
+    const words = ['Web Developer', 'Designer', 'Freelancer', 'App Developer'];
+    let wordIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let isEnd = false;
 
-    let i = 0
-    function typeWriter() {
-        if (i < titleText.length) {
-            titleElement.textContent += titleText.charAt(i)
-            i++
-            setTimeout(typeWriter, 100)
-        }
-    }
+    function typeEffect() {
+        const currentWord = words[wordIndex];
 
-    // Start the typing animation after a short delay
-    setTimeout(typeWriter, 500)
+        // Current text based on whether deleting or typing
+        const text = currentWord.substring(0, charIndex);
+        typingElement.textContent = text;
 
-    // Smooth scrolling for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault()
+        // Speed based on whether deleting or typing
+        let typeSpeed = 100;
 
-            const targetId = this.getAttribute("href")
-            const targetElement = document.querySelector(targetId)
-
-            if (targetElement) {
-                window.scrollTo({
-                    top: targetElement.offsetTop,
-                    behavior: "smooth",
-                })
-            }
-        })
-    })
-
-    // Navbar background change on scroll
-    const navbar = document.querySelector(".navbar")
-
-    window.addEventListener("scroll", () => {
-        if (window.scrollY > 100) {
-            navbar.style.background = "rgba(15, 23, 42, 0.95)"
+        if (isDeleting) {
+            typeSpeed /= 2; // Faster when deleting
+            charIndex--;
         } else {
-            navbar.style.background = "rgba(15, 23, 42, 0.8)"
+            charIndex++;
         }
-    })
 
-    // Parallax effect for header
-    const header = document.querySelector(".header")
+        // If word is complete
+        if (!isDeleting && charIndex === currentWord.length) {
+            isEnd = true;
+            isDeleting = true;
+            typeSpeed = 1500; // Pause at end of word
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            wordIndex = (wordIndex + 1) % words.length;
+            typeSpeed = 500; // Pause before typing next word
+        }
 
-    window.addEventListener("scroll", () => {
-        const scrollPosition = window.scrollY
-        header.style.backgroundPositionY = scrollPosition * 0.5 + "px"
-    })
+        setTimeout(typeEffect, typeSpeed);
+    }
+
+// Start the typing effect
+    setTimeout(typeEffect, 1000);
+
+    // Scroll to top button
+    const scrollTopBtn = document.querySelector('.scroll-top');
+
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            scrollTopBtn.classList.add('active');
+        } else {
+            scrollTopBtn.classList.remove('active');
+        }
+
+        // Header shadow on scroll
+        const header = document.querySelector('header');
+        if (window.pageYOffset > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+
+        // Animate skill bars on scroll
+        const skillSection = document.querySelector('.skills');
+        const skillBars = document.querySelectorAll('.skill-progress');
+
+        if (isInViewport(skillSection)) {
+            skillBars.forEach(bar => {
+                const width = bar.style.width;
+                bar.style.width = width;
+            });
+        }
+    });
+
+    scrollTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    // Project filtering
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Remove active class from all buttons
+            filterBtns.forEach(btn => btn.classList.remove('active'));
+
+            // Add active class to clicked button
+            btn.classList.add('active');
+
+            const filter = btn.getAttribute('data-filter');
+
+            projectCards.forEach(card => {
+                if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                    card.style.display = 'block';
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'scale(1)';
+                    }, 100);
+                } else {
+                    card.style.opacity = '0';
+                    card.style.transform = 'scale(0.8)';
+                    setTimeout(() => {
+                        card.style.display = 'none';
+                    }, 300);
+                }
+            });
+        });
+    });
 
     // Animate elements when they come into view
-    const animateOnScroll = () => {
-        const elements = document.querySelectorAll(".glass-card, .project-card, .section-title")
+    const animateElements = document.querySelectorAll('.about-content, .skills-content, .project-card, .contact-content');
 
-        elements.forEach((element) => {
-            const elementPosition = element.getBoundingClientRect().top
-            const screenPosition = window.innerHeight / 1.3
-
-            if (elementPosition < screenPosition) {
-                element.style.opacity = "1"
-                element.style.transform = "translateY(0)"
+    function animateOnScroll() {
+        animateElements.forEach(element => {
+            if (isInViewport(element)) {
+                element.classList.add('animate');
             }
-        })
+        });
     }
 
-    // Set initial state for animated elements
-    document.querySelectorAll(".glass-card, .project-card, .section-title").forEach((element) => {
-        element.style.opacity = "0"
-        element.style.transform = "translateY(20px)"
-        element.style.transition = "all 0.6s ease"
-    })
+    // Initial check for elements in viewport
+    animateOnScroll();
 
-    // Run animation check on scroll
-    window.addEventListener("scroll", animateOnScroll)
+    // Check on scroll
+    window.addEventListener('scroll', animateOnScroll);
 
-    // Run once on page load
-    animateOnScroll()
-
-    // Check if the device is not mobile
-    const isNotMobile = window.matchMedia("(min-width: 768px)").matches;
-
-    if (isNotMobile) {
-        // Mouse indicator functionality
-        const mouseIndicator = document.querySelector(".mouse-indicator")
-        let mouseX = 0,
-            mouseY = 0
-        let indicatorX = 0,
-            indicatorY = 0
-
-        document.addEventListener("mousemove", (e) => {
-            mouseX = e.clientX
-            mouseY = e.clientY
-        })
-
-        function animateMouseIndicator() {
-            const dx = mouseX - indicatorX
-            const dy = mouseY - indicatorY
-
-            indicatorX += dx * 0.2
-            indicatorY += dy * 0.2
-
-            mouseIndicator.style.left = `${indicatorX}px`
-            mouseIndicator.style.top = `${indicatorY}px`
-
-            requestAnimationFrame(animateMouseIndicator)
-        }
-
-        animateMouseIndicator()
-
-        // Scale up indicator when hovering over interactive elements
-        const interactiveElements = document.querySelectorAll(
-            "a, button, .menu-toggle, .project-card, .glass-card, .social-link, .social-icon"
-        )
-
-        interactiveElements.forEach((elem) => {
-            elem.addEventListener("mouseenter", () => {
-                mouseIndicator.style.transform = "scale(1.5)"
-                mouseIndicator.style.backgroundColor = "rgba(255, 255, 255, 0.5)"
-            })
-
-            elem.addEventListener("mouseleave", () => {
-                mouseIndicator.style.transform = "scale(1)"
-                mouseIndicator.style.backgroundColor = "rgba(255, 255, 255, 0.3)"
-            })
-        })
-
-        // Scroll indicator functionality
-        const scrollIndicator = document.querySelector('.scroll-indicator');
-        const aboutSection = document.getElementById('about');
-
-        if (scrollIndicator && aboutSection) {
-            scrollIndicator.addEventListener('click', () => {
-                aboutSection.scrollIntoView({ behavior: 'smooth' });
-            });
-
-            // Smooth transition for scroll indicator
-            let lastScrollTop = 0;
-            window.addEventListener('scroll', () => {
-                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-                if (scrollTop > lastScrollTop) {
-                    // Scrolling down
-                    scrollIndicator.style.opacity = '0';
-                    scrollIndicator.style.transform = 'translate(-50%, 20px)';
-                } else {
-                    // Scrolling up
-                    if (scrollTop < 100) {
-                        scrollIndicator.style.opacity = '1';
-                        scrollIndicator.style.transform = 'translate(-50%, 0)';
-                    }
-                }
-                lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-            });
-        }
-    } else {
-        // Remove mouse indicator and scroll indicator for mobile
-        const mouseIndicator = document.querySelector(".mouse-indicator");
-        const scrollIndicator = document.querySelector('.scroll-indicator');
-
-        if (mouseIndicator) {
-            mouseIndicator.remove();
-        }
-        if (scrollIndicator) {
-            scrollIndicator.remove();
-        }
+    // Helper function to check if element is in viewport
+    function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+            rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.bottom >= 0
+        );
     }
-})
+
+    // Initialize skill bars
+    const skillBars = document.querySelectorAll('.skill-progress');
+    skillBars.forEach(bar => {
+        const width = bar.style.width;
+        bar.style.width = '0';
+
+        setTimeout(() => {
+            bar.style.width = width;
+        }, 500);
+    });
+});

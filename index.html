@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#4b59ff">
 
-    <title>David Stuchlík</title>
+    <title>David Stuchlík - Web & App Developer</title>
     <meta name="description" content="David Stuchlík - Web & App developer">
 
     <!-- Facebook / OpenGraph -->
@@ -21,145 +21,296 @@
 
     <link rel="icon" href="favicon.png" sizes="62x62" type="image/png">
 
-    <!-- CSS -->
+    <!-- Styles -->
     <link rel="stylesheet" href="css/page/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Scripts -->
+    <script src="js/script.js" defer></script>
 </head>
 <body>
-<!-- Add this line at the beginning of the body -->
-<div class="mouse-indicator"></div>
-
-<!-- Navbar -->
-<nav class="navbar">
-    <div class="nav-container">
-        <div class="logo">DS</div>
-        <div class="menu-toggle" id="mobile-menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
+<header>
+    <div class="container">
+        <div class="logo">
+            <a href="#home">David Stuchlík</a>
         </div>
-        <ul class="nav-menu">
-            <li><a href="#home" class="nav-item"><i class="fas fa-home"></i> Domů</a></li>
-            <li><a href="#about" class="nav-item"><i class="fas fa-user"></i> O mně</a></li>
-            <li><a href="#projects" class="nav-item"><i class="fas fa-code"></i> Projekty</a></li>
-            <li><a href="#contact" class="nav-item"><i class="fas fa-envelope"></i> Kontakt</a></li>
-        </ul>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Domů</a></li>
+                <li><a href="#about">O mně</a></li>
+                <li><a href="#skills">Dovednosti</a></li>
+                <li><a href="#projects">Projekty</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
     </div>
-</nav>
+</header>
 
-<!-- Header Section -->
-<header id="home" class="header">
-    <div class="header-content">
-        <h1 class="title">
-            <span class="title-animation">David Stuchlík</span>
-        </h1>
-        <p class="subtitle">Web & App Developer</p>
-        <div class="cta-buttons">
-            <a href="#projects" class="btn btn-primary">Vidět projekty</a>
-            <a href="#contact" class="btn btn-secondary">Kontakt</a>
+<section id="home" class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <h1 class="animate-text">Ahoj, jmenuji se <span class="highlight">David Stuchlík</span></h1>
+            <div class="typing-container">
+                <p>Jsem <span class="typing"></span></p>
+            </div>
+            <p class="hero-description">Vítejte na mém portfoliu, kde můžete najít mé projekty.</p>
+            <div class="cta-buttons">
+                <a href="#projects" class="btn primary-btn">Moje Projekty</a>
+                <a href="#contact" class="btn secondary-btn">Kontaktujte Mě</a>
+            </div>
+            <div class="social-links">
+                <a href="https://github.com/Dejv1s" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                <a href="https://instagram.com/dejvis._" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="blob"></div>
         </div>
     </div>
-    <!-- Add this scroll indicator -->
+    <!-- Add this right before the closing </div> of the hero section -->
     <div class="scroll-indicator">
         <div class="mouse">
             <div class="wheel"></div>
         </div>
-        <div class="arrow"></div>
-    </div>
-</header>
-
-<!-- About Section -->
-<section id="about" class="about-section">
-    <h2 class="section-title">O mně</h2>
-    <div class="glass-cards">
-        <div class="glass-card">
-            <i class="fas fa-laptop-code card-icon"></i>
-            <h3>Development</h3>
-            <p>Zabývám se proramováním Webových stránek a aplikací pomocí HTML, CSS, JS, C# & Django.</p>
-        </div>
-        <div class="glass-card">
-            <i class="fas fa-school card-icon"></i>
-            <h3>Studium</h3>
-            <p>Studuju Vyšší odbornou a Střední průmyslovou školu v Jičíně.</p>
-        </div>
-        <div class="glass-card">
-            <i class="fas fa-palette card-icon"></i>
-            <h3>Design</h3>
-            <p>Snažím se vytvořit pro každou novou webovou stránku originální design který je unikátní.</p>
+        <div class="arrows">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
     </div>
 </section>
 
-<!-- Projects Section -->
-<section id="projects" class="projects-section">
-    <h2 class="section-title">Moje projekty</h2>
-    <div class="projects-container">
-        <div class="project-card">
-            <div class="project-labels">
-                <span class="label">JavaScript</span>
-                <span class="label">HTML</span>
-                <span class="label">CSS</span>
-            </div>
-            <h3 class="project-title">Průmka Tournaments</h3>
-            <p class="project-date">Březen 2025</p>
-            <p class="project-description">Vytvořil jsem webovou stránku pro organizaci která se zabývá tvořením e-sportových turnajů pro střední školy.</p>
-            <a href="https://prumkatournaments.eu" class="project-link">Podívat se <i class="fas fa-arrow-right"></i></a>
-        </div>
-        <div class="project-card">
-            <div class="project-labels">
-                <span class="label">HTML</span>
-                <span class="label">CSS</span>
-                <span class="label">JavaScript</span>
-            </div>
-            <h3 class="project-title">Portfolio</h3>
-            <p class="project-date">Březen 2025</p>
-            <p class="project-description">Vytvořil jsem svoje nové portfolio na které právě koukáte.</p>
-            <a href="https://dejv.me" class="project-link">Podívat se <i class="fas fa-arrow-right"></i></a>
-        </div>
-        <div class="project-card">
-            <div class="project-labels">
-                <span class="label">C#</span>
-                <span class="label">.NET MAUI</span>
-                <span class="label">XAML</span>
-            </div>
-            <h3 class="project-title">Aluminium</h3>
-            <p class="project-date">Leden 2025</p>
-            <p class="project-description">Vytvořil jsem aplikaci pro android díky které můžete mít dálkové ovládání pro Netflix pomocí serveru zapnutého na počítači.</p>
-            <a href="https://github.com/Dejv1s/Aluminium" class="project-link">Podívat se <i class="fas fa-arrow-right"></i></a>
-        </div>
-    </div>
-</section>
-
-<!-- Contact Section -->
-<section id="contact" class="contact-section">
-    <h2 class="section-title">Chcete semnou něco vytvořit? Kontaktujte mě</h2>
-    <div class="contact-container">
-        <div class="contact-info glass-card">
-            <h3>Contact Information</h3>
-            <p><i class="fas fa-envelope"></i> dejv1s.secret@gmail.com</p>
-            <p><i class="fas fa-map-marker-alt"></i> Jičín, Česká Republika</p>
-            <div class="social-links">
-                <a href="https://github.com/Dejv1s" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
-                <a href="https://instagram.com/Dejvis._/" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
+<section id="about" class="about">
+    <div class="container">
+        <h2 class="section-title">O mně</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <h3>Kdo jsem?</h3>
+                <p>Jsem student Vyšší odborné a Střední průmyslové školy v Jičíně. Zabývám se programováním webových stránek & Windows aplikací. Momentálně ještě jsem jedním ze zakladatelů organizace Průmka Tournaments.</p>
+                <p>Mezi mé nejpoužívanější nástroje patří Jetbrains IDEs, GitHub a Docker.</p>
+                <div class="personal-info">
+                    <div class="info-item">
+                        <span class="info-title">Email:</span>
+                        <span class="info-value">dejv1s.secret@gmail.com</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-title">Lokalita:</span>
+                        <span class="info-value">Česká republika</span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Footer -->
-<footer class="footer">
-    <div class="footer-content">
-        <div class="footer-logo">DS</div>
-        <h3 class="footer-title">DAVID STUCHLIK</h3>
-        <div class="footer-socials">
-            <a href="https://instagram.com/dejvis._/"  target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
-            <a href="https://dsc.gg/prumkatournaments" target="_blank" class="social-icon"><i class="fab fa-discord"></i></a>
-            <a href="https://github.com/dejv1s" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+<section id="skills" class="skills">
+    <div class="container">
+        <h2 class="section-title">Moje dovednosti</h2>
+        <div class="skills-content">
+            <div class="skill-category">
+                <h3>Frontend</h3>
+                <div class="skill-items">
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <h4>HTML</h4>
+                            <p>95%</p>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <h4>CSS</h4>
+                            <p>90%</p>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <h4>JavaScript</h4>
+                            <p>50%</p>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <h4>Tailwind css</h4>
+                            <p>30%</p>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>Backend</h3>
+                <div class="skill-items">
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <h4>C#</h4>
+                            <p>50%</p>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <h4>Django</h4>
+                            <p>70%</p>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 70%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <h4>FireBase</h4>
+                            <p>60%</p>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <h4>MySQL</h4>
+                            <p>65%</p>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 65%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <p class="copyright">© 2025 David Stuchlík. All rights reserved.</p>
+    </div>
+</section>
+
+<section id="projects" class="projects">
+    <div class="container">
+        <h2 class="section-title">Moje projekty</h2>
+        <div class="project-filters">
+            <button class="filter-btn active" data-filter="all">Všechny</button>
+            <button class="filter-btn" data-filter="web">Web</button>
+            <button class="filter-btn" data-filter="app">Aplikace</button>
+        </div>
+        <div class="projects-grid">
+            <div class="project-card" data-category="web">
+                <div class="project-info">
+                    <h3>Portfolio</h3>
+                    <p>Moje osobní portfolio</p>
+                    <div class="project-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Dejv1s/dejv.me" target="_blank" class="btn small-btn">GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card" data-category="web">
+                <div class="project-info">
+                    <h3>Průmka Tournaments</h3>
+                    <p>E-sportová organizace</p>
+                    <div class="project-tags">
+                        <span>React</span>
+                        <span>Firebase</span>
+                        <span>HTML</span>
+                            <span>CSS</span>
+
+                    </div>
+                    <div class="project-links">
+                        <a href="https://prumkatournaments.eu" target="_blank" class="btn small-btn">Odkaz</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card" data-category="app">
+                <div class="project-info">
+                    <h3>Aluminium</h3>
+                    <p>Aplikace pro ovládání klávesnice</p>
+                    <div class="project-tags">
+                        <span>C#</span>
+                        <span>.NET MAUI</span>
+                        <span>XAML</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/dejv1s/aluminium" target="_blank" class="btn small-btn">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <div class="container">
+        <h2 class="section-title">Kontaktujte mě</h2>
+        <div class="contact-content">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contact-text">
+                        <h3>Jičín</h3>
+                        <p>Česká republika</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-text">
+                        <h3>Email</h3>
+                        <p>dejv1s.secret@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-cta">
+                <h3>Pojďme spolupracovat</h3>
+                <p>Máte-li zájem o spolupráci nebo dotaz, neváhejte mě kontaktovat pomocí výše uvedených kontaktních údajů.</p>
+                <div class="social-links">
+                    <a href="https://github.com/Dejv1s" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                    <a href="https://instagram.com/dejvis._" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <a href="#home">David Stuchlík</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://github.com/dejv1s" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                <a href="https://instagram.com/dejvis._" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 David Stuchlík. Všechna práva vyhrazena.</p>
+        </div>
     </div>
 </footer>
 
-<script src="js/script.js"></script>
+<div class="scroll-top">
+    <i class="fas fa-arrow-up"></i>
+</div>
 </body>
 </html>
