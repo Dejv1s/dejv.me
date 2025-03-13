@@ -303,9 +303,10 @@ header .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    opacity: 0;
+    opacity: 1;
     animation: fadeIn 1s forwards 1.5s;
 }
+
 @keyframes fadeIn {
     to {
         opacity: 1;
@@ -790,7 +791,9 @@ footer {
         transition: transform 0.5s ease;
         z-index: 999;
     }
-
+    .scroll-indicator, .mouse, .wheel {
+        display: none;
+    }
     .nav-links.active {
         transform: translateY(0);
     }
@@ -838,6 +841,9 @@ footer {
 }
 
 @media screen and (max-width: 576px) {
+    .scroll-indicator, .mouse, .wheel {
+        display: none;
+    }
     .projects-grid {
         grid-template-columns: 1fr;
     }
