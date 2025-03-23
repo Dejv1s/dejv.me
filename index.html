@@ -4,21 +4,21 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#4b59ff">
+    <meta name="theme-color" content="#6366f1">
 
     <title>David Stuchlík - Web & App Developer</title>
     <meta name="description" content="David Stuchlík - Web & App developer">
     <meta name="keywords" content="David Stuchlík, David, Stuchlík, Developer, Web Developer, App Developer, Portfolio">
 
     <!-- Facebook / OpenGraph -->
-    <meta property="og:url"                 content="https://dejv.me" />
-    <meta property="og:title"               content="David Stuchlík" />
-    <meta property="og:description"         content="David Stuchlík - Web & App developer" />
-    <meta property="og:site_name"           content="David Stuchlík" />
-    <meta property="og:image"               content="https://dejv.me/favicon.png" />
-    <meta property="fb:app_id"              content="000000" />  <!-- Used for Domain Insights -->
-    <meta property="og:type"                content="website" /> <!-- website is deafult -->
-    <meta property="og:locale"              content="cs_CZ" />   <!-- en_US is deafult -->
+    <meta property="og:url" content="https://dejv.me" />
+    <meta property="og:title" content="David Stuchlík" />
+    <meta property="og:description" content="David Stuchlík - Web & App developer" />
+    <meta property="og:site_name" content="David Stuchlík" />
+    <meta property="og:image" content="https://dejv.me/favicon.png" />
+    <meta property="fb:app_id" content="000000" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="cs_CZ" />
 
     <link rel="icon" href="favicon.png" sizes="62x62" type="image/png">
 
@@ -26,18 +26,21 @@
     <link rel="stylesheet" href="css/page/styles.css">
     <link rel="stylesheet" href="css/static/loader.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Scripts -->
     <script src="js/script.js" defer></script>
     <script src="js/loader.js" defer></script>
 </head>
 <body>
-
 <!-- Loader -->
 <div id="loader">
-    <img src="favicon.png" alt="Logo" class="loader-logo">
+    <div class="loader-content">
+        <img src="favicon.png" alt="Logo" class="loader-logo">
+        <div class="loader-bar"></div>
+    </div>
 </div>
+
 <header>
     <div class="container">
         <div class="logo">
@@ -63,25 +66,55 @@
 <section id="home" class="hero">
     <div class="container">
         <div class="hero-content">
+            <div class="hero-badge">Web & App Developer</div>
             <h1 class="animate-text">Ahoj, jmenuji se <span class="highlight">David Stuchlík</span></h1>
             <div class="typing-container">
                 <p>Jsem <span class="typing"></span></p>
             </div>
             <p class="hero-description">Vítejte na mém portfoliu, kde můžete najít mé projekty.</p>
             <div class="cta-buttons">
-                <a href="#projects" class="btn primary-btn">Moje Projekty</a>
-                <a href="#contact" class="btn secondary-btn">Kontaktujte Mě</a>
+                <a href="#projects" class="btn primary-btn">
+                    <span>Moje Projekty</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#contact" class="btn secondary-btn">
+                    <span>Kontaktujte Mě</span>
+                </a>
             </div>
             <div class="social-links">
-                <a href="https://github.com/Dejv1s" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
-                <a href="https://instagram.com/dejvis._" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="https://github.com/Dejv1s" target="_blank" class="social-icon" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://instagram.com/dejvis._" target="_blank" class="social-icon" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
             </div>
         </div>
         <div class="hero-image">
             <div class="blob"></div>
+            <div class="blob blob-2"></div>
+            <div class="blob blob-3"></div>
+            <div class="hero-card">
+                <div class="hero-card-header">
+                    <div class="hero-card-dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="hero-card-title">Hello World</div>
+                </div>
+                <div class="hero-card-body">
+                    <code>
+                        <span class="code-keyword">const</span> <span class="code-variable">developer</span> = {<br>
+                        &nbsp;&nbsp;name: <span class="code-string">"David Stuchlík"</span>,<br>
+                        &nbsp;&nbsp;skills: [<span class="code-string">"Web"</span>, <span class="code-string">"App"</span>, <span class="code-string">"Design"</span>],<br>
+                        &nbsp;&nbsp;passion: <span class="code-string">"Creating amazing experiences"</span><br>
+                        };
+                    </code>
+                </div>
+            </div>
         </div>
     </div>
-    <!-- Add this right before the closing </div> of the hero section -->
     <div class="scroll-indicator">
         <div class="mouse">
             <div class="wheel"></div>
@@ -96,7 +129,10 @@
 
 <section id="about" class="about">
     <div class="container">
-        <h2 class="section-title">O mně</h2>
+        <div class="section-header">
+            <span class="section-subtitle">Kdo jsem</span>
+            <h2 class="section-title">O mně</h2>
+        </div>
         <div class="about-content">
             <div class="about-text">
                 <h3>Kdo jsem?</h3>
@@ -104,12 +140,22 @@
                 <p>Mezi mé nejpoužívanější nástroje patří Jetbrains IDEs, GitHub a Docker.</p>
                 <div class="personal-info">
                     <div class="info-item">
-                        <span class="info-title">Email:</span>
-                        <span class="info-value">dejv1s.secret@gmail.com</span>
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <span class="info-title">Email:</span>
+                            <span class="info-value"><a href="mailto:dejv1s.secret@gmail.com" class="__cf_email__" data-cfemail="9df9f8f7ebaceeb3eef8feeff8e9ddfaf0fcf4f1b3fef2f0">dejv1s.secret@gmail.com</a></span>
+                        </div>
                     </div>
                     <div class="info-item">
-                        <span class="info-title">Lokalita:</span>
-                        <span class="info-value">Česká republika</span>
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <span class="info-title">Lokalita:</span>
+                            <span class="info-value">Česká republika</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -119,10 +165,18 @@
 
 <section id="skills" class="skills">
     <div class="container">
-        <h2 class="section-title">Moje dovednosti</h2>
+        <div class="section-header light">
+            <span class="section-subtitle">Co umím</span>
+            <h2 class="section-title">Moje dovednosti</h2>
+        </div>
         <div class="skills-content">
             <div class="skill-category">
-                <h3>Frontend</h3>
+                <div class="skill-category-header">
+                    <div class="skill-category-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Frontend</h3>
+                </div>
                 <div class="skill-items">
                     <div class="skill-item">
                         <div class="skill-info">
@@ -153,7 +207,7 @@
                     </div>
                     <div class="skill-item">
                         <div class="skill-info">
-                            <h4>Tailwind css</h4>
+                            <h4>Tailwind CSS</h4>
                             <p>30%</p>
                         </div>
                         <div class="skill-bar">
@@ -163,7 +217,12 @@
                 </div>
             </div>
             <div class="skill-category">
-                <h3>Backend</h3>
+                <div class="skill-category-header">
+                    <div class="skill-category-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>Backend</h3>
+                </div>
                 <div class="skill-items">
                     <div class="skill-item">
                         <div class="skill-info">
@@ -209,7 +268,10 @@
 
 <section id="projects" class="projects">
     <div class="container">
-        <h2 class="section-title">Moje projekty</h2>
+        <div class="section-header">
+            <span class="section-subtitle">Moje práce</span>
+            <h2 class="section-title">Moje projekty</h2>
+        </div>
         <div class="project-filters">
             <button class="filter-btn active" data-filter="all">Všechny</button>
             <button class="filter-btn" data-filter="web">Web</button>
@@ -219,6 +281,13 @@
             <div class="project-card" data-category="web">
                 <div class="project-img">
                     <img src="https://i.imgur.com/TI3GcXk.webp" alt="Portfolio">
+                    <div class="project-overlay">
+                        <div class="project-overlay-content">
+                            <a href="https://github.com/Dejv1s/dejv.me" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
                 <div class="project-info">
                     <h3>Portfolio</h3>
@@ -228,14 +297,18 @@
                         <span>CSS</span>
                         <span>JavaScript</span>
                     </div>
-                    <div class="project-links">
-                        <a href="https://github.com/Dejv1s/dejv.me" target="_blank" class="btn small-btn">GitHub</a>
-                    </div>
                 </div>
             </div>
             <div class="project-card" data-category="web">
                 <div class="project-img">
                     <img src="https://i.imgur.com/P5Tn3JK.webp" alt="Průmka Tournaments">
+                    <div class="project-overlay">
+                        <div class="project-overlay-content">
+                            <a href="https://prumkatournaments.eu" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
                 <div class="project-info">
                     <h3>Průmka Tournaments</h3>
@@ -244,17 +317,18 @@
                         <span>React</span>
                         <span>Firebase</span>
                         <span>HTML</span>
-                            <span>CSS</span>
-
-                    </div>
-                    <div class="project-links">
-                        <a href="https://prumkatournaments.eu" target="_blank" class="btn small-btn">Odkaz</a>
+                        <span>CSS</span>
                     </div>
                 </div>
             </div>
             <div class="project-card" data-category="projects">
                 <div class="project-img">
                     <img src="https://i.imgur.com/WAEGhu0.png" alt="ArcWear">
+                    <div class="project-overlay">
+                        <div class="project-overlay-content">
+                            <span class="coming-soon">V blízké době...</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="project-info">
                     <h3>ArcWear</h3>
@@ -263,10 +337,6 @@
                         <span>HTML</span>
                         <span>CSS</span>
                         <span>JS</span>
-
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="btn small-btn">V blízké době...</a>
                     </div>
                 </div>
             </div>
@@ -276,25 +346,28 @@
 
 <section id="contact" class="contact">
     <div class="container">
-        <h2 class="section-title">Kontaktujte mě</h2>
+        <div class="section-header light">
+            <span class="section-subtitle">Spojme se</span>
+            <h2 class="section-title">Kontaktujte mě</h2>
+        </div>
         <div class="contact-content">
             <div class="contact-info">
-                <div class="contact-item">
-                    <div class="contact-icon">
+                <div class="contact-card">
+                    <div class="contact-card-icon">
                         <i class="fas fa-map-marker-alt"></i>
                     </div>
-                    <div class="contact-text">
-                        <h3>Jičín</h3>
-                        <p>Česká republika</p>
+                    <div class="contact-card-content">
+                        <h3>Lokalita</h3>
+                        <p>Jičín, Česká republika</p>
                     </div>
                 </div>
-                <div class="contact-item">
-                    <div class="contact-icon">
+                <div class="contact-card">
+                    <div class="contact-card-icon">
                         <i class="fas fa-envelope"></i>
                     </div>
-                    <div class="contact-text">
+                    <div class="contact-card-content">
                         <h3>Email</h3>
-                        <p>dejv1s.secret@gmail.com</p>
+                        <p><a href="mailto:dejv1s.secret@gmail.com" class="__cf_email__" data-cfemail="9df9f8f7ebaceeb3eef8feeff8e9ddfaf0fcf4f1b3fef2f0">dejv1s.secret@gmail.com</a></p>
                     </div>
                 </div>
             </div>
@@ -302,8 +375,12 @@
                 <h3>Pojďme spolupracovat</h3>
                 <p>Máte-li zájem o spolupráci nebo dotaz, neváhejte mě kontaktovat pomocí výše uvedených kontaktních údajů.</p>
                 <div class="social-links">
-                    <a href="https://github.com/Dejv1s" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
-                    <a href="https://instagram.com/dejvis._" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="https://github.com/Dejv1s" target="_blank" class="social-icon" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://instagram.com/dejvis._" target="_blank" class="social-icon" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
                 </div>
             </div>
         </div>
@@ -317,8 +394,12 @@
                 <a href="#home">David Stuchlík</a>
             </div>
             <div class="footer-social">
-                <a href="https://github.com/dejv1s" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
-                <a href="https://instagram.com/dejvis._" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="https://github.com/dejv1s" target="_blank" class="social-icon" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://instagram.com/dejvis._" target="_blank" class="social-icon" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
             </div>
         </div>
         <div class="footer-bottom">

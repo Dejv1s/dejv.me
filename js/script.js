@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (isInViewport(skillSection)) {
             skillBars.forEach(bar => {
-                const width = bar.style.width;
+                const width = bar.getAttribute('data-width') || bar.style.width;
                 bar.style.width = width;
             });
         }
@@ -162,11 +162,11 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Animate elements when they come into view
-    const animateElements = document.querySelectorAll('.about-content, .skills-content, .project-card, .contact-content');
+    const animateElements = document.querySelectorAll('.about-content, .skills-content, .project-card, .contact-content, .section-header');
 
     function animateOnScroll() {
         animateElements.forEach(element => {
-            if (isInViewport(element)) {
+            if (isInViewport(element) && !element.classList.contains('animate')) {
                 element.classList.add('animate');
             }
         });
@@ -182,7 +182,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function isInViewport(element) {
         const rect = element.getBoundingClientRect();
         return (
-            rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.8 &&
             rect.bottom >= 0
         );
     }
@@ -191,10 +191,24 @@ document.addEventListener('DOMContentLoaded', function () {
     const skillBars = document.querySelectorAll('.skill-progress');
     skillBars.forEach(bar => {
         const width = bar.style.width;
+        bar.setAttribute('data-width', width);
         bar.style.width = '0';
+    });
 
-        setTimeout(() => {
-            bar.style.width = width;
-        }, 500);
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80, // Offset for header
+                    behavior: 'smooth'
+                });
+            }
+        });
     });
 });
